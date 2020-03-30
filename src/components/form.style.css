@@ -1,0 +1,17 @@
+.container form{
+    margin-top: 3rem;
+    align-items:center;
+    justify-content: center;
+    margin-left: 25%;
+   
+   
+}
+
+form input[name="city"], input[name="country"]{
+    background-color: transparent;
+    color: black;
+    border: 0;
+  
+    border-bottom: 2px solid whitesmoke;
+    border-radius: 0;
+}
