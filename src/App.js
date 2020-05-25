@@ -68,7 +68,6 @@ class APP extends Component {
   
 
  getWeather = async(e)=> {
-
    e.preventDefault();
 
    const Api_Key='3c3d113338d435fa758212f788ba3c7d';
@@ -78,8 +77,11 @@ class APP extends Component {
    console.log(country);
    if (city)
     
-    {const responce = await fetch( `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${Api_Key}`);
+    {
+     const responce = await fetch( `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${Api_Key}`);
+     // const responce = await fetch( `https://localhost/registry.npmjs.org/restapi`);
     const data= await responce.json(); 
+    console.log("test");
     console.log(data);
     
     this.setState({
@@ -113,6 +115,8 @@ class APP extends Component {
         temp_max={this.state.temp_max}
         description={this.state.description}
         weathericone={this.state.icon}  />
+    
+  
       </div>
     
       
